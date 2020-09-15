@@ -18,9 +18,13 @@ void pyramid(int floor)
 {
     for (int i = 1; i <= floor; i++)
     {
-        for (int j = 1; j <= floor; j++)
+        for (int j = 0; j <= (floor + i); j++)
         {
-            if (j > (floor - i))
+            if (j == floor)
+            {
+                printf("  ");
+            }
+            else if (j >= (floor - i) && j <= (floor + i))
             {
                 printf("#");
             }
@@ -28,6 +32,7 @@ void pyramid(int floor)
             {
                 printf(" ");
             }
+
         }
         printf("\n");
     }

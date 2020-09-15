@@ -28,7 +28,9 @@ int main(void)
             sentences++;
         }
     }
+    
     int index = coleman_liau_index(letters, words, sentences);
+    
     grade(index);
 }
 

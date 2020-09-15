@@ -55,20 +55,18 @@ bool errors_handling(int argc, string argv[])
 
 bool not_all_alpha(string key)
 {
-    bool as_non_alpha = false;
     for (int i = 0, n = strlen(key); i < n; i++)
     {
         if (!isalpha(key[i]))
         {
-            as_non_alpha = true;
+            return true;
         }
     }
-    return as_non_alpha;
+    return false;
 }
 
 bool not_only_uniq_char(string key)
 {
-    bool as_duplicated_char = false;
     int counter = 0;
 
     for (int i = 0, n = strlen(alphabet); i < n; i++)
@@ -82,14 +80,14 @@ bool not_only_uniq_char(string key)
         }
         if (counter > 1)
         {
-            as_duplicated_char = true;
+            return true;
         }
         else
         {
             counter = 0;
         }
     }
-    return as_duplicated_char;
+    return false;
 }
 
 void sub_cipher(string key, string plaintext)

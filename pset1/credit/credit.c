@@ -1,4 +1,3 @@
-/* Resolved by using only the course content, so without array... and it was a pain in the ass ! */
 #include <stdio.h>
 #include <cs50.h>
 
@@ -62,7 +61,6 @@ bool luhn(long card)
         card = card / 10;
         i++;
     }
-    
     int sum_luhn = sum_double_digit + sum_simple_digit;
     return sum_luhn % 10 == 0;
 }
